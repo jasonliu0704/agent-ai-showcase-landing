@@ -5,40 +5,40 @@ import { Play, ChevronRight } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-muted">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-muted px-4 py-8">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-20 -right-20 md:-top-40 md:-right-40 w-40 h-40 md:w-80 md:h-80 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-20 -left-20 md:-bottom-40 md:-left-40 w-40 h-40 md:w-80 md:h-80 bg-accent/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute -top-10 -right-10 sm:-top-20 sm:-right-20 md:-top-40 md:-right-40 w-20 h-20 sm:w-40 sm:h-40 md:w-80 md:h-80 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-10 -left-10 sm:-bottom-20 sm:-left-20 md:-bottom-40 md:-left-40 w-20 h-20 sm:w-40 sm:h-40 md:w-80 md:h-80 bg-accent/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
       
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-7xl">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left side - Content */}
-          <div className="space-y-8 animate-slide-in-left">
+          <div className="space-y-6 lg:space-y-8 animate-slide-in-left text-center lg:text-left">
             <div className="space-y-4">
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
                 🤖 AI-Powered HR Revolution
               </div>
-              <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight">
                 Meet Your Next
                 <span className="block text-primary">HR Digital Agent</span>
               </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
+              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 Transform your hiring process with our AI agent that screens candidates, 
                 evaluates fit, and identifies top talent 24/7 - all while maintaining 
                 the human touch your candidates deserve.
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="group" asChild>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <Button size="lg" className="group w-full sm:w-auto" asChild>
                 <a href="https://avatartalkai.com/character/chat/HRkevin" target="_blank" rel="noopener noreferrer">
                   Get Started Free
                   <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="group" asChild>
+              <Button variant="outline" size="lg" className="group w-full sm:w-auto" asChild>
                 <a href="https://avatartalkai.com/character/chat/HRkevin" target="_blank" rel="noopener noreferrer">
                   <Play className="mr-2 h-4 w-4" />
                   Watch Demo
@@ -46,7 +46,7 @@ const HeroSection = () => {
               </Button>
             </div>
             
-            <div className="flex items-center gap-6 text-sm text-muted-foreground">
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                 <span>24/7 Active Screening</span>
@@ -59,11 +59,11 @@ const HeroSection = () => {
           </div>
           
           {/* Right side - YouTube Video */}
-          <div className="animate-slide-in-right flex justify-center">
+          <div className="animate-slide-in-right flex justify-center order-first lg:order-last">
             <div className="relative w-full max-w-2xl">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 rounded-2xl blur-xl"></div>
-              <div className="relative bg-card border rounded-2xl p-8 shadow-2xl">
-                <div className="aspect-video bg-muted rounded-lg overflow-hidden min-h-[400px]">
+              <div className="relative bg-card border rounded-2xl p-4 sm:p-8 shadow-2xl">
+                <div className="aspect-video bg-muted rounded-lg overflow-hidden">
                   <iframe
                     width="100%"
                     height="100%"
@@ -76,7 +76,7 @@ const HeroSection = () => {
                   ></iframe>
                 </div>
                 
-                <div className="mt-6 flex items-center justify-between text-sm text-muted-foreground">
+                <div className="mt-4 sm:mt-6 flex items-center justify-between text-sm text-muted-foreground">
                   <span>AI HR Agent Demo Video</span>
                   <span className="flex items-center gap-1">
                     <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>

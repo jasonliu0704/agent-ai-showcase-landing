@@ -83,15 +83,15 @@ const CTASection = () => {
   };
 
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-12 sm:py-16 lg:py-24 relative overflow-hidden px-4">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent"></div>
       
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Social Proof */}
-        <div className="text-center mb-16 animate-fade-in">
-          <div className="flex items-center justify-center gap-8 mb-8 text-muted-foreground">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-8 text-muted-foreground">
             <div className="flex items-center gap-2">
               <Star className="h-5 w-5 text-yellow-500 fill-current" />
               <span className="text-sm">4.9/5 Rating</span>
@@ -107,14 +107,14 @@ const CTASection = () => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Left side - Signup Form */}
-          <div className="animate-slide-in-left">
-            <div className="bg-card border rounded-2xl p-8 shadow-xl">
+          <div className="animate-slide-in-left order-2 lg:order-1">
+            <div className="bg-card border rounded-2xl p-6 sm:p-8 shadow-xl">
               {!isSubmitted ? (
                 <>
-                  <div className="text-center mb-8">
-                    <h3 className="text-3xl font-bold mb-4">
+                  <div className="text-center mb-6 sm:mb-8">
+                    <h3 className="text-2xl sm:text-3xl font-bold mb-4">
                       Start Your Free Trial
                     </h3>
                     <p className="text-muted-foreground">
@@ -123,7 +123,7 @@ const CTASection = () => {
                   </div>
                   
                   <form onSubmit={handleSubmit} className="space-y-4">
-                    <div className="grid md:grid-cols-2 gap-4">
+                    <div className="grid sm:grid-cols-2 gap-4">
                       <Input 
                         name="firstName"
                         value={formData.firstName}
@@ -179,11 +179,11 @@ const CTASection = () => {
                   </div>
                 </>
               ) : (
-                <div className="text-center py-8">
+                <div className="text-center py-6 sm:py-8">
                   <div className="flex justify-center mb-6">
-                    <CheckCircle className="h-16 w-16 text-green-500" />
+                    <CheckCircle className="h-12 w-12 sm:h-16 sm:w-16 text-green-500" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-green-600">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-4 text-green-600">
                     You're on the Waitlist!
                   </h3>
                   <p className="text-muted-foreground mb-6">
@@ -202,36 +202,36 @@ const CTASection = () => {
           </div>
           
           {/* Right side - Demo Scheduling */}
-          <div className="animate-slide-in-right">
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-3xl font-bold mb-4">
+          <div className="animate-slide-in-right order-1 lg:order-2">
+            <div className="space-y-6 sm:space-y-8">
+              <div className="text-center lg:text-left">
+                <h3 className="text-2xl sm:text-3xl font-bold mb-4">
                   Want to See It in Action?
                 </h3>
-                <p className="text-xl text-muted-foreground mb-6">
+                <p className="text-lg sm:text-xl text-muted-foreground mb-6">
                   Schedule a personalized demo and see how our AI agent can transform 
                   your hiring process in just 15 minutes.
                 </p>
               </div>
               
-              <div className="bg-gradient-to-r from-primary to-primary/80 rounded-2xl p-8 text-primary-foreground">
+              <div className="bg-gradient-to-r from-primary to-primary/80 rounded-2xl p-6 sm:p-8 text-primary-foreground">
                 <div className="flex items-center mb-6">
-                  <Calendar className="h-8 w-8 mr-3" />
+                  <Calendar className="h-6 w-6 sm:h-8 sm:w-8 mr-3 flex-shrink-0" />
                   <div>
-                    <h4 className="text-xl font-semibold">Book Your Demo</h4>
-                    <p className="opacity-90">Available slots this week</p>
+                    <h4 className="text-lg sm:text-xl font-semibold">Book Your Demo</h4>
+                    <p className="opacity-90 text-sm sm:text-base">Available slots this week</p>
                   </div>
                 </div>
                 
-                <div className="space-y-4 mb-6">
+                <div className="space-y-3 sm:space-y-4 mb-6">
                   <div className="flex items-center justify-between bg-white/10 rounded-lg p-3">
-                    <span>✅ Live AI agent demonstration</span>
+                    <span className="text-sm sm:text-base">✅ Live AI agent demonstration</span>
                   </div>
                   <div className="flex items-center justify-between bg-white/10 rounded-lg p-3">
-                    <span>✅ Custom use case discussion</span>
+                    <span className="text-sm sm:text-base">✅ Custom use case discussion</span>
                   </div>
                   <div className="flex items-center justify-between bg-white/10 rounded-lg p-3">
-                    <span>✅ ROI calculation for your team</span>
+                    <span className="text-sm sm:text-base">✅ ROI calculation for your team</span>
                   </div>
                 </div>
                 
@@ -258,14 +258,14 @@ const CTASection = () => {
         </div>
         
         {/* Bottom testimonial */}
-        <div className="mt-16 text-center animate-fade-in">
+        <div className="mt-12 sm:mt-16 text-center animate-fade-in">
           <div className="bg-card border rounded-xl p-6 max-w-2xl mx-auto">
             <div className="flex justify-center mb-4">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-5 w-5 text-yellow-500 fill-current" />
+                <Star key={i} className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-500 fill-current" />
               ))}
             </div>
-            <blockquote className="text-lg mb-4">
+            <blockquote className="text-base sm:text-lg mb-4">
               "Our AI HR agent reduced our time-to-hire by 60% and improved candidate 
               quality significantly. It's like having a senior recruiter working 24/7."
             </blockquote>

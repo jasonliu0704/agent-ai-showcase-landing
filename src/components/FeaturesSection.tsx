@@ -58,20 +58,20 @@ const FeaturesSection = () => {
   }, []);
 
   return (
-    <section className="py-24 bg-muted/30">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl lg:text-5xl font-bold mb-6">
+    <section className="py-12 sm:py-16 lg:py-24 bg-muted/30 px-4">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold mb-4 sm:mb-6">
             Your AI Agent is
             <span className="block text-primary">Always Working</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
             Watch as our AI agent handles every aspect of initial candidate screening 
             with precision, consistency, and 24/7 availability.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             const isVisible = visibleFeatures.includes(index);
@@ -84,13 +84,13 @@ const FeaturesSection = () => {
                 }`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="bg-card border rounded-xl p-6 h-full hover:shadow-lg transition-all duration-300 hover:border-primary/20">
-                  <div className="flex items-start space-x-4">
-                    <div className={`${feature.color} p-3 bg-background rounded-lg`}>
-                      <Icon className="h-6 w-6" />
+                <div className="bg-card border rounded-xl p-4 sm:p-6 h-full hover:shadow-lg transition-all duration-300 hover:border-primary/20">
+                  <div className="flex items-start space-x-3 sm:space-x-4">
+                    <div className={`${feature.color} p-2 sm:p-3 bg-background rounded-lg flex-shrink-0`}>
+                      <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-base sm:text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
                         {feature.title}
                       </h3>
                       <p className="text-muted-foreground text-sm leading-relaxed">
@@ -100,7 +100,7 @@ const FeaturesSection = () => {
                   </div>
                   
                   {/* Progress indicator */}
-                  <div className="mt-4 w-full bg-muted rounded-full h-1">
+                  <div className="mt-3 sm:mt-4 w-full bg-muted rounded-full h-1">
                     <div 
                       className={`h-1 rounded-full transition-all duration-1000 ${feature.color.replace('text-', 'bg-')}`}
                       style={{ 
@@ -116,18 +116,18 @@ const FeaturesSection = () => {
         </div>
 
         {/* Interactive demo section */}
-        <div className="mt-16 animate-fade-in">
-          <div className="bg-card border rounded-2xl p-8 max-w-4xl mx-auto">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold mb-4">See It In Action</h3>
+        <div className="mt-12 sm:mt-16 animate-fade-in">
+          <div className="bg-card border rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto">
+            <div className="text-center mb-6 sm:mb-8">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4">See It In Action</h3>
               <p className="text-muted-foreground">
                 Real-time demonstration of our AI agent processing a candidate interaction
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
               <div className="space-y-4">
-                <h4 className="font-semibold text-lg">Candidate Input</h4>
+                <h4 className="font-semibold text-base sm:text-lg">Candidate Input</h4>
                 <div className="bg-muted rounded-lg p-4 space-y-3">
                   <div className="bg-background rounded p-3 text-sm">
                     "I have 5 years of React experience and I'm looking for a senior role..."
@@ -139,7 +139,7 @@ const FeaturesSection = () => {
               </div>
               
               <div className="space-y-4">
-                <h4 className="font-semibold text-lg">AI Analysis</h4>
+                <h4 className="font-semibold text-base sm:text-lg">AI Analysis</h4>
                 <div className="space-y-2">
                   {[
                     { label: "Qualifications Match", value: 95, color: "bg-green-500" },

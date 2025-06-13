@@ -32,9 +32,11 @@ const HeroSection = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="group">
-                Get Started Free
-                <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <Button size="lg" className="group" asChild>
+                <a href="https://avatartalkai.com/character/chat/HRkevin" target="_blank" rel="noopener noreferrer">
+                  Get Started Free
+                  <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </a>
               </Button>
               <Button variant="outline" size="lg" className="group">
                 <Play className="mr-2 h-4 w-4" />

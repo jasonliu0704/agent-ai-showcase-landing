@@ -13,7 +13,7 @@ const HeroSection = () => {
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left side - Content */}
           <div className="space-y-8 animate-slide-in-left">
             <div className="space-y-4">
@@ -59,11 +59,11 @@ const HeroSection = () => {
           </div>
           
           {/* Right side - YouTube Video */}
-          <div className="animate-slide-in-right">
-            <div className="relative">
+          <div className="animate-slide-in-right flex justify-center">
+            <div className="relative w-full max-w-2xl">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 rounded-2xl blur-xl"></div>
-              <div className="relative bg-card border rounded-2xl p-6 shadow-2xl">
-                <div className="aspect-video bg-muted rounded-lg overflow-hidden">
+              <div className="relative bg-card border rounded-2xl p-8 shadow-2xl">
+                <div className="aspect-video bg-muted rounded-lg overflow-hidden min-h-[400px]">
                   <iframe
                     width="100%"
                     height="100%"
@@ -72,11 +72,11 @@ const HeroSection = () => {
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
-                    className="rounded-lg"
+                    className="rounded-lg w-full h-full"
                   ></iframe>
                 </div>
                 
-                <div className="mt-4 flex items-center justify-between text-sm text-muted-foreground">
+                <div className="mt-6 flex items-center justify-between text-sm text-muted-foreground">
                   <span>AI HR Agent Demo Video</span>
                   <span className="flex items-center gap-1">
                     <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>

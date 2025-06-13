@@ -118,9 +118,12 @@ const CTASection = () => {
                   variant="secondary" 
                   className="w-full group" 
                   size="lg"
+                  asChild
                 >
-                  Schedule Demo Call
-                  <Calendar className="ml-2 h-4 w-4 transition-transform group-hover:scale-110" />
+                  <a href="https://calendly.com/jasonliu0704/onsite-interview-slot" target="_blank" rel="noopener noreferrer">
+                    Schedule Demo Call
+                    <Calendar className="ml-2 h-4 w-4 transition-transform group-hover:scale-110" />
+                  </a>
                 </Button>
               </div>
               

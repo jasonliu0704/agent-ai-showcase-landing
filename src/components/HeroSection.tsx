@@ -54,40 +54,29 @@ const HeroSection = () => {
             </div>
           </div>
           
-          {/* Right side - Video Demo */}
+          {/* Right side - YouTube Video */}
           <div className="animate-slide-in-right">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 rounded-2xl blur-xl"></div>
               <div className="relative bg-card border rounded-2xl p-6 shadow-2xl">
-                <div className="aspect-video bg-muted rounded-lg flex items-center justify-center relative overflow-hidden">
-                  {/* Simulated video interface */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-800"></div>
-                  <div className="relative z-10 text-center space-y-4">
-                    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto animate-pulse-glow">
-                      <Play className="h-6 w-6 text-primary-foreground" />
-                    </div>
-                    <div className="space-y-2">
-                      <p className="text-white font-medium">AI Agent Demo</p>
-                      <p className="text-white/70 text-sm">See it in action</p>
-                    </div>
-                  </div>
-                  
-                  {/* Simulated chat bubbles */}
-                  <div className="absolute bottom-4 left-4 right-4 space-y-2">
-                    <div className="bg-primary text-primary-foreground text-sm p-2 rounded-lg max-w-xs animate-fade-in">
-                      Hi! I'm your AI HR assistant. Let's discuss this role.
-                    </div>
-                    <div className="bg-white text-slate-900 text-sm p-2 rounded-lg max-w-xs ml-auto animate-fade-in delay-500">
-                      I'm interested in learning more!
-                    </div>
-                  </div>
+                <div className="aspect-video bg-muted rounded-lg overflow-hidden">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/JIM8aKMFJLE"
+                    title="AI HR Digital Agent Demo"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    className="rounded-lg"
+                  ></iframe>
                 </div>
                 
                 <div className="mt-4 flex items-center justify-between text-sm text-muted-foreground">
-                  <span>Live HR Agent Conversation</span>
+                  <span>AI HR Agent Demo Video</span>
                   <span className="flex items-center gap-1">
                     <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-                    Recording
+                    Live
                   </span>
                 </div>
               </div>
